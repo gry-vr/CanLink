@@ -1,0 +1,99 @@
+#pragma once 
+
+#include "dura_max.h"
+#include "decoding.h"
+#include <functional>
+#include <string>
+
+
+/*
+int dura_max_eec9_electronic_engine_control_9_unpack(
+    struct dura_max_eec9_electronic_engine_control_9_t *dst_p,
+    const uint8_t *src_p,
+    size_t size)
+{
+*/
+
+
+template <typename StructType>
+class PGN_Owner {
+    StructType strct;
+    std::function<void(StructType*, const uint8_t *, size_t size)> unpack_func;
+    std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func;
+    
+public:
+    PGN_Owner(
+        StructType strct,
+        std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func
+    ) : strct(strct), decode_func(decode_func) {}
+    
+    PGN_Owner
+    (
+      std::function<int(StructType*)> init_func,
+      std::function<void(StructType*, const uint8_t *, size_t size)> unpack_func,
+      std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func
+    ) : unpack_func(unpack_func), decode_func(decode_func)
+    {
+      init_func(&strct);
+    }
+    
+    void update_values(const uint8_t *src_p){
+      unpack_func(&strct, src_p, 8);
+    }    
+
+    void add_to_valuetable(std::unordered_map<std::string, double>& value_map) {
+        decode_func(value_map, &strct);
+    }
+};
+
+
+
+gry@gry-wrk:~/Work/CanLink$ make
+g++ -Wall -Wextra -std=c++17 -Iinclude -c src/decoding.cpp -o src/decoding.o
+g++ -Wall -Wextra -std=c++17 -Iinclude -c src/main.cpp -o src/main.o
+In file included from /usr/include/c++/14/functional:59,
+                 from src/../include/PGN_Owner.h:5,
+                 from src/../include/MessageHandlerBuilder.h:3,
+                 from src/../include/MessageHandler.h:3,
+                 from src/main.cpp:14:
+/usr/include/c++/14/bits/std_function.h:45:1: error: expected initializer before ‘namespace’
+   45 | namespace std _GLIBCXX_VISIBILITY(default)
+      | ^~~~~~~~~
+src/../include/PGN_Owner.h:22:10: error: ‘function’ in namespace ‘std’ does not name a template type
+   22 |     std::function<void(StructType*, const uint8_t *, size_t size)> unpack_func;
+      |          ^~~~~~~~
+src/../include/PGN_Owner.h:6:1: note: ‘std::function’ is defined in header ‘<functional>’; this is probably fixable by adding ‘#include <functional>’
+    5 | #include <functional>
+  +++ |+#include <functional>
+    6 | #include <string>
+src/../include/PGN_Owner.h:23:10: error: ‘function’ in namespace ‘std’ does not name a template type
+   23 |     std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func;
+      |          ^~~~~~~~
+src/../include/PGN_Owner.h:23:5: note: ‘std::function’ is defined in header ‘<functional>’; this is probably fixable by adding ‘#include <functional>’
+   23 |     std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func;
+      |     ^~~
+src/../include/PGN_Owner.h:28:9: error: ‘std::function’ has not been declared
+   28 |         std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func
+      |         ^~~
+src/../include/PGN_Owner.h:28:22: error: expected ‘,’ or ‘...’ before ‘<’ token
+   28 |         std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func
+      |                      ^
+src/../include/PGN_Owner.h:33:20: error: expected ‘)’ before ‘<’ token
+   33 |       std::function<int(StructType*)> init_func,
+      |                    ^
+      |                    )
+src/../include/PGN_Owner.h:32:5: note: to match this ‘(’
+   32 |     (
+      |     ^
+src/../include/PGN_Owner.h: In constructor ‘PGN_Owner<StructType>::PGN_Owner(StructType, int)’:
+src/../include/PGN_Owner.h:29:23: error: class ‘PGN_Owner<StructType>’ does not have any field named ‘decode_func’
+   29 |     ) : strct(strct), decode_func(decode_func) {}
+      |                       ^~~~~~~~~~~
+src/../include/PGN_Owner.h:29:35: error: ‘decode_func’ was not declared in this scope
+   29 |     ) : strct(strct), decode_func(decode_func) {}
+      |                                   ^~~~~~~~~~~
+src/main.cpp: In function ‘int main(int, char**)’:
+src/main.cpp:33:21: error: ‘openCanSocket’ was not declared in this scope
+   33 |     int sock_can0 = openCanSocket(argv[1]);
+      |                     ^~~~~~~~~~~~~
+make: *** [makefile:30: src/main.o] Error 1
