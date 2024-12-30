@@ -66,8 +66,8 @@ public:
       std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func
   ) {
       id_to_owner[id] = std::make_unique<PGN_Owner_Wrapper<StructType>>(
-          strct,
-          decode_func
+        strct,
+        decode_func
       );
   }
 
@@ -80,9 +80,9 @@ public:
       std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func
   ) {
       id_to_owner[id] = std::make_unique<PGN_Owner_Wrapper<StructType>>(
-          init_func,
-          unpack_func,
-          decode_func
+        init_func,
+        unpack_func,
+        decode_func
       );
   }
 
@@ -140,5 +140,12 @@ public:
       for(const auto& [id,val] : updated_ids){
           std::cout << "Signal " << id << " value " << val << "\n";
       }
+  }
+
+  void print_id_to_owner_map(){
+          for(const auto& [id,PGN_Owner_Base] : id_to_outgoing){
+          std::cout << "ids " << id << "\n"; 
+      }
+      std::cout << id_to_owner.size() << "\n";
   }
 };

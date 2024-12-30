@@ -64,24 +64,36 @@ void set_pgn_owners(MessageHandler& handler);
 
 int main(int argc, char* argv[]) {
 
-
-    
     MessageHandler handler;
 
     // Initialize EngineData PGN Owner
 
-    set_subscriptions(handler);
     set_pgn_owners(handler);
 
+    set_subscriptions(handler);
+    
 
 
     // Initialize outgoing message for dashboard
 
-    handler.set_outgoing_message(0x300, {});
-    handler.set_outgoing_message(0x400, {});
+    handler.set_outgoing_message(0x300,{});
+    handler.set_outgoing_message(0x400,{}); // delete this one
+    handler.set_outgoing_message(0x301,{});
+    handler.set_outgoing_message(0x302,{});
+    handler.set_outgoing_message(0x303,{});
+    handler.set_outgoing_message(0x304,{});
+    handler.set_outgoing_message(0x305,{});
+    handler.set_outgoing_message(0x306,{});
+    handler.set_outgoing_message(0x307,{});
+    handler.set_outgoing_message(0x308,{});
+    handler.set_outgoing_message(0x309,{});
+    handler.set_outgoing_message(0x30B,{});
+    handler.set_outgoing_message(0x30C,{});
+    handler.set_outgoing_message(0x30D,{});
 
+    // 30A is unused so therefore skipped
 
-
+    handler.print_id_to_owner_map();
 
 
 
@@ -141,7 +153,9 @@ int main(int argc, char* argv[]) {
             if (events[i].events & EPOLLIN) {
 
                 struct can_frame frame;
+
                 auto start_time = std::chrono::high_resolution_clock::now();
+
                 ssize_t nbytes = read(fd, &frame, sizeof(frame));
                 
                 if (nbytes < 0) {
@@ -210,11 +224,151 @@ void set_subscriptions(MessageHandler& handler){
 }
 
 void set_pgn_owners(MessageHandler& handler){
+    int counter = 0;
     handler.add_pgn_owner<dura_max_eec5_electronic_engine_control_5_t>(
         DURA_MAX_EEC5_ELECTRONIC_ENGINE_CONTROL_5_FRAME_ID,  // CAN ID for engine data
         dura_max_eec5_electronic_engine_control_5_init,
         dura_max_eec5_electronic_engine_control_5_unpack,
         decode_dura_max_eec5_electronic_engine_control_5
     );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_amb_ambient_conditions_t>(
+        DURA_MAX_AMB_AMBIENT_CONDITIONS_FRAME_ID,
+        dura_max_amb_ambient_conditions_init,
+        dura_max_amb_ambient_conditions_unpack,
+        decode_dura_max_amb_ambient_conditions
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_eec1_electronic_engine_control_1_t>(
+        DURA_MAX_EEC1_ELECTRONIC_ENGINE_CONTROL_1_FRAME_ID,
+        dura_max_eec1_electronic_engine_control_1_init,
+        dura_max_eec1_electronic_engine_control_1_unpack,
+        decode_dura_max_eec1_electronic_engine_control_1
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_eec2_electronic_engine_control_2_t>(
+        DURA_MAX_EEC2_ELECTRONIC_ENGINE_CONTROL_2_FRAME_ID,
+        dura_max_eec2_electronic_engine_control_2_init,
+        dura_max_eec2_electronic_engine_control_2_unpack,
+        decode_dura_max_eec2_electronic_engine_control_2
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_eec3_electronic_engine_control_3_t>(
+        DURA_MAX_EEC3_ELECTRONIC_ENGINE_CONTROL_3_FRAME_ID,
+        dura_max_eec3_electronic_engine_control_3_init,
+        dura_max_eec3_electronic_engine_control_3_unpack,
+        decode_dura_max_eec3_electronic_engine_control_3
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_eec9_electronic_engine_control_9_t>(
+        DURA_MAX_EEC9_ELECTRONIC_ENGINE_CONTROL_9_FRAME_ID,
+        dura_max_eec9_electronic_engine_control_9_init,
+        dura_max_eec9_electronic_engine_control_9_unpack,
+        decode_dura_max_eec9_electronic_engine_control_9
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_eec20_electronic_engine_control__t>(
+        DURA_MAX_EEC20_ELECTRONIC_ENGINE_CONTROL__FRAME_ID,
+        dura_max_eec20_electronic_engine_control__init,
+        dura_max_eec20_electronic_engine_control__unpack,
+        decode_dura_max_eec20_electronic_engine_control_
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_cac1_charge_air_cooler_1_t>(
+        DURA_MAX_CAC1_CHARGE_AIR_COOLER_1_FRAME_ID,
+        dura_max_cac1_charge_air_cooler_1_init,
+        dura_max_cac1_charge_air_cooler_1_unpack,
+        decode_dura_max_cac1_charge_air_cooler_1
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_easi_engine_air_system_info_t>(
+        DURA_MAX_EASI_ENGINE_AIR_SYSTEM_INFO_FRAME_ID,
+        dura_max_easi_engine_air_system_info_init,
+        dura_max_easi_engine_air_system_info_unpack,
+        decode_dura_max_easi_engine_air_system_info
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_ebcc_engine_exhaust_brake_cont_t>(
+        DURA_MAX_EBCC_ENGINE_EXHAUST_BRAKE_CONT_FRAME_ID,
+        dura_max_ebcc_engine_exhaust_brake_cont_init,
+        dura_max_ebcc_engine_exhaust_brake_cont_unpack,
+        decode_dura_max_ebcc_engine_exhaust_brake_cont
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_efl_p1_eng_fluid_level_press_1_t>(
+        DURA_MAX_EFL_P1_ENG_FLUID_LEVEL_PRESS_1_FRAME_ID,
+        dura_max_efl_p1_eng_fluid_level_press_1_init,
+        dura_max_efl_p1_eng_fluid_level_press_1_unpack,
+        decode_dura_max_efl_p1_eng_fluid_level_press_1
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_efl_p2_eng_fluid_level_press_2_t>(
+        DURA_MAX_EFL_P2_ENG_FLUID_LEVEL_PRESS_2_FRAME_ID,
+        dura_max_efl_p2_eng_fluid_level_press_2_init,
+        dura_max_efl_p2_eng_fluid_level_press_2_unpack,
+        decode_dura_max_efl_p2_eng_fluid_level_press_2
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_et1_engine_temperature_1_t>(
+        DURA_MAX_ET1_ENGINE_TEMPERATURE_1_FRAME_ID,
+        dura_max_et1_engine_temperature_1_init,
+        dura_max_et1_engine_temperature_1_unpack,
+        decode_dura_max_et1_engine_temperature_1
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_et3_engine_temperature_3_t>(
+        DURA_MAX_ET3_ENGINE_TEMPERATURE_3_FRAME_ID,
+        dura_max_et3_engine_temperature_3_init,
+        dura_max_et3_engine_temperature_3_unpack,
+        decode_dura_max_et3_engine_temperature_3
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_ic1_intake_exhaust_cond_1_t>(
+        DURA_MAX_IC1_INTAKE_EXHAUST_COND_1_FRAME_ID,
+        dura_max_ic1_intake_exhaust_cond_1_init,
+        dura_max_ic1_intake_exhaust_cond_1_unpack,
+        decode_dura_max_ic1_intake_exhaust_cond_1
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_lfe1_fuel_economy_liquid_1_t>(
+        DURA_MAX_LFE1_FUEL_ECONOMY_LIQUID_1_FRAME_ID,
+        dura_max_lfe1_fuel_economy_liquid_1_init,
+        dura_max_lfe1_fuel_economy_liquid_1_unpack,
+        decode_dura_max_lfe1_fuel_economy_liquid_1
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_tci5_turbocharger_information_5_t>(
+        DURA_MAX_TCI5_TURBOCHARGER_INFORMATION_5_FRAME_ID,
+        dura_max_tci5_turbocharger_information_5_init,
+        dura_max_tci5_turbocharger_information_5_unpack,
+        decode_dura_max_tci5_turbocharger_information_5
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_vep1_vehicle_electrical_power_1_t>(
+        DURA_MAX_VEP1_VEHICLE_ELECTRICAL_POWER_1_FRAME_ID,
+        dura_max_vep1_vehicle_electrical_power_1_init,
+        dura_max_vep1_vehicle_electrical_power_1_unpack,
+        decode_dura_max_vep1_vehicle_electrical_power_1
+    );
+    counter++;
+
+    std::cout << "\n" << "amount counter: " << counter << "\n";
 }
 

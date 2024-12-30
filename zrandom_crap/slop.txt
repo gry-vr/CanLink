@@ -1,99 +1,148 @@
-#pragma once 
 
-#include "dura_max.h"
-#include "decoding.h"
-#include <functional>
-#include <string>
+void set_pgn_owners(MessageHandler& handler){
+    int counter = 0;
+    handler.add_pgn_owner<dura_max_eec5_electronic_engine_control_5_t>(
+        DURA_MAX_EEC5_ELECTRONIC_ENGINE_CONTROL_5_FRAME_ID,  // CAN ID for engine data
+        dura_max_eec5_electronic_engine_control_5_init,
+        dura_max_eec5_electronic_engine_control_5_unpack,
+        decode_dura_max_eec5_electronic_engine_control_5
+    );
+    counter++;
 
+    handler.add_pgn_owner<dura_max_amb_ambient_conditions_t>(
+        DURA_MAX_AMB_AMBIENT_CONDITIONS_FRAME_ID,
+        dura_max_amb_ambient_conditions_init,
+        dura_max_amb_ambient_conditions_unpack,
+        decode_dura_max_amb_ambient_conditions
+    );
+    counter++;
 
-/*
-int dura_max_eec9_electronic_engine_control_9_unpack(
-    struct dura_max_eec9_electronic_engine_control_9_t *dst_p,
-    const uint8_t *src_p,
-    size_t size)
-{
-*/
+    handler.add_pgn_owner<dura_max_eec1_electronic_engine_control_1_t>(
+        DURA_MAX_EEC1_ELECTRONIC_ENGINE_CONTROL_1_FRAME_ID,
+        dura_max_eec1_electronic_engine_control_1_init,
+        dura_max_eec1_electronic_engine_control_1_unpack,
+        decode_dura_max_eec1_electronic_engine_control_1
+    );
+    counter++;
 
+    handler.add_pgn_owner<dura_max_eec2_electronic_engine_control_2_t>(
+        DURA_MAX_EEC2_ELECTRONIC_ENGINE_CONTROL_2_FRAME_ID,
+        dura_max_eec2_electronic_engine_control_2_init,
+        dura_max_eec2_electronic_engine_control_2_unpack,
+        decode_dura_max_eec2_electronic_engine_control_2
+    );
+	
 
-template <typename StructType>
-class PGN_Owner {
-    StructType strct;
-    std::function<void(StructType*, const uint8_t *, size_t size)> unpack_func;
-    std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func;
-    
-public:
-    PGN_Owner(
-        StructType strct,
-        std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func
-    ) : strct(strct), decode_func(decode_func) {}
-    
-    PGN_Owner
-    (
-      std::function<int(StructType*)> init_func,
-      std::function<void(StructType*, const uint8_t *, size_t size)> unpack_func,
-      std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func
-    ) : unpack_func(unpack_func), decode_func(decode_func)
-    {
-      init_func(&strct);
-    }
-    
-    void update_values(const uint8_t *src_p){
-      unpack_func(&strct, src_p, 8);
-    }    
+    handler.add_pgn_owner<dura_max_eec3_electronic_engine_control_3_t>(
+        DURA_MAX_EEC3_ELECTRONIC_ENGINE_CONTROL_3_FRAME_ID,
+        dura_max_eec3_electronic_engine_control_3_init,
+        dura_max_eec3_electronic_engine_control_3_unpack,
+        decode_dura_max_eec3_electronic_engine_control_3
+    );
+    counter++;
 
-    void add_to_valuetable(std::unordered_map<std::string, double>& value_map) {
-        decode_func(value_map, &strct);
-    }
-};
+    handler.add_pgn_owner<dura_max_eec9_electronic_engine_control_9_t>(
+        DURA_MAX_EEC9_ELECTRONIC_ENGINE_CONTROL_9_FRAME_ID,
+        dura_max_eec9_electronic_engine_control_9_init,
+        dura_max_eec9_electronic_engine_control_9_unpack,
+        decode_dura_max_eec9_electronic_engine_control_9
+    );
+    counter++;
 
+    handler.add_pgn_owner<dura_max_eec20_electronic_engine_control__t>(
+        DURA_MAX_EEC20_ELECTRONIC_ENGINE_CONTROL__FRAME_ID,
+        dura_max_eec20_electronic_engine_control__init,
+        dura_max_eec20_electronic_engine_control__unpack,
+        decode_dura_max_eec20_electronic_engine_control_
+    );
 
+    handler.add_pgn_owner<dura_max_cac1_charge_air_cooler_1_t>(
+        DURA_MAX_CAC1_CHARGE_AIR_COOLER_1_FRAME_ID,
+        dura_max_cac1_charge_air_cooler_1_init,
+        dura_max_cac1_charge_air_cooler_1_unpack,
+        decode_dura_max_cac1_charge_air_cooler_1
+    );
+    counter++;
 
-gry@gry-wrk:~/Work/CanLink$ make
-g++ -Wall -Wextra -std=c++17 -Iinclude -c src/decoding.cpp -o src/decoding.o
-g++ -Wall -Wextra -std=c++17 -Iinclude -c src/main.cpp -o src/main.o
-In file included from /usr/include/c++/14/functional:59,
-                 from src/../include/PGN_Owner.h:5,
-                 from src/../include/MessageHandlerBuilder.h:3,
-                 from src/../include/MessageHandler.h:3,
-                 from src/main.cpp:14:
-/usr/include/c++/14/bits/std_function.h:45:1: error: expected initializer before ‘namespace’
-   45 | namespace std _GLIBCXX_VISIBILITY(default)
-      | ^~~~~~~~~
-src/../include/PGN_Owner.h:22:10: error: ‘function’ in namespace ‘std’ does not name a template type
-   22 |     std::function<void(StructType*, const uint8_t *, size_t size)> unpack_func;
-      |          ^~~~~~~~
-src/../include/PGN_Owner.h:6:1: note: ‘std::function’ is defined in header ‘<functional>’; this is probably fixable by adding ‘#include <functional>’
-    5 | #include <functional>
-  +++ |+#include <functional>
-    6 | #include <string>
-src/../include/PGN_Owner.h:23:10: error: ‘function’ in namespace ‘std’ does not name a template type
-   23 |     std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func;
-      |          ^~~~~~~~
-src/../include/PGN_Owner.h:23:5: note: ‘std::function’ is defined in header ‘<functional>’; this is probably fixable by adding ‘#include <functional>’
-   23 |     std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func;
-      |     ^~~
-src/../include/PGN_Owner.h:28:9: error: ‘std::function’ has not been declared
-   28 |         std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func
-      |         ^~~
-src/../include/PGN_Owner.h:28:22: error: expected ‘,’ or ‘...’ before ‘<’ token
-   28 |         std::function<void(std::unordered_map<std::string, double>&, StructType*)> decode_func
-      |                      ^
-src/../include/PGN_Owner.h:33:20: error: expected ‘)’ before ‘<’ token
-   33 |       std::function<int(StructType*)> init_func,
-      |                    ^
-      |                    )
-src/../include/PGN_Owner.h:32:5: note: to match this ‘(’
-   32 |     (
-      |     ^
-src/../include/PGN_Owner.h: In constructor ‘PGN_Owner<StructType>::PGN_Owner(StructType, int)’:
-src/../include/PGN_Owner.h:29:23: error: class ‘PGN_Owner<StructType>’ does not have any field named ‘decode_func’
-   29 |     ) : strct(strct), decode_func(decode_func) {}
-      |                       ^~~~~~~~~~~
-src/../include/PGN_Owner.h:29:35: error: ‘decode_func’ was not declared in this scope
-   29 |     ) : strct(strct), decode_func(decode_func) {}
-      |                                   ^~~~~~~~~~~
-src/main.cpp: In function ‘int main(int, char**)’:
-src/main.cpp:33:21: error: ‘openCanSocket’ was not declared in this scope
-   33 |     int sock_can0 = openCanSocket(argv[1]);
-      |                     ^~~~~~~~~~~~~
-make: *** [makefile:30: src/main.o] Error 1
+    handler.add_pgn_owner<dura_max_easi_engine_air_system_info_t>(
+        DURA_MAX_EASI_ENGINE_AIR_SYSTEM_INFO_FRAME_ID,
+        dura_max_easi_engine_air_system_info_init,
+        dura_max_easi_engine_air_system_info_unpack,
+        decode_dura_max_easi_engine_air_system_info
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_ebcc_engine_exhaust_brake_cont_t>(
+        DURA_MAX_EBCC_ENGINE_EXHAUST_BRAKE_CONT_FRAME_ID,
+        dura_max_ebcc_engine_exhaust_brake_cont_init,
+        dura_max_ebcc_engine_exhaust_brake_cont_unpack,
+        decode_dura_max_ebcc_engine_exhaust_brake_cont
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_efl_p1_eng_fluid_level_press_1_t>(
+        DURA_MAX_EFL_P1_ENG_FLUID_LEVEL_PRESS_1_FRAME_ID,
+        dura_max_efl_p1_eng_fluid_level_press_1_init,
+        dura_max_efl_p1_eng_fluid_level_press_1_unpack,
+        decode_dura_max_efl_p1_eng_fluid_level_press_1
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_efl_p2_eng_fluid_level_press_2_t>(
+        DURA_MAX_EFL_P2_ENG_FLUID_LEVEL_PRESS_2_FRAME_ID,
+        dura_max_efl_p2_eng_fluid_level_press_2_init,
+        dura_max_efl_p2_eng_fluid_level_press_2_unpack,
+        decode_dura_max_efl_p2_eng_fluid_level_press_2
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_et1_engine_temperature_1_t>(
+        DURA_MAX_ET1_ENGINE_TEMPERATURE_1_FRAME_ID,
+        dura_max_et1_engine_temperature_1_init,
+        dura_max_et1_engine_temperature_1_unpack,
+        decode_dura_max_et1_engine_temperature_1
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_et3_engine_temperature_3_t>(
+        DURA_MAX_ET3_ENGINE_TEMPERATURE_3_FRAME_ID,
+        dura_max_et3_engine_temperature_3_init,
+        dura_max_et3_engine_temperature_3_unpack,
+        decode_dura_max_et3_engine_temperature_3
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_ic1_intake_exhaust_cond_1_t>(
+        DURA_MAX_IC1_INTAKE_EXHAUST_COND_1_FRAME_ID,
+        dura_max_ic1_intake_exhaust_cond_1_init,
+        dura_max_ic1_intake_exhaust_cond_1_unpack,
+        decode_dura_max_ic1_intake_exhaust_cond_1
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_lfe1_fuel_economy_liquid_1_t>(
+        DURA_MAX_LFE1_FUEL_ECONOMY_LIQUID_1_FRAME_ID,
+        dura_max_lfe1_fuel_economy_liquid_1_init,
+        dura_max_lfe1_fuel_economy_liquid_1_unpack,
+        decode_dura_max_lfe1_fuel_economy_liquid_1
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_tci5_turbocharger_information_5_t>(
+        DURA_MAX_TCI5_TURBOCHARGER_INFORMATION_5_FRAME_ID,
+        dura_max_tci5_turbocharger_information_5_init,
+        dura_max_tci5_turbocharger_information_5_unpack,
+        decode_dura_max_tci5_turbocharger_information_5
+    );
+    counter++;
+
+    handler.add_pgn_owner<dura_max_vep1_vehicle_electrical_power_1_t>(
+        DURA_MAX_VEP1_VEHICLE_ELECTRICAL_POWER_1_FRAME_ID,
+        dura_max_vep1_vehicle_electrical_power_1_init,
+        dura_max_vep1_vehicle_electrical_power_1_unpack,
+        decode_dura_max_vep1_vehicle_electrical_power_1
+    );
+    counter++;
+
+    std::cout << "\n" << "amount counter: " << counter << "\n";
+}
