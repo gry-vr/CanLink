@@ -22,35 +22,153 @@
 
 
 // Set up subscriptions for dashboard display (ID: 0x300)
-std::vector<Subscription> eec5_subs = {
-    Subscription{
-        .signal_name = "engine_turbocharger_1_calculated",
-        .subscriber_id = 0x300,
-        .length = 16,
-        .value = 16,
-        .pos = 2,
-        .scale = 1,
-        .offset = 0},    // Fixed narrowing conversion
 
+
+
+
+std::vector<Subscription> amb_subs = {
     Subscription{
-        .signal_name = "commanded_vgt_position",
-        .subscriber_id = 0x400,
+        .signal_name = "barometric_pressure_barometric_pr",
+        .subscriber_id = 0x307,
         .length = 16,
-        .value = 16,
+        .value = 0,
         .pos = 0,
-        .scale = 1,
-        .offset = 0},
-
+        .scale = 0.1, // kPa to mBar
+        .offset = 0,
+    },
     Subscription{
-        .signal_name = "engine_variable_geometry_turboch",
-        .subscriber_id = 0x400,
+        .signal_name = "ambient_air_temperature",
+        .subscriber_id = 0x30B,
         .length = 8,
         .value = 0,
-        .pos =  7,
+        .pos = 3,
         .scale = 1,
-        .offset = 0}
+        .offset = 0
+    }
 };
 
+
+std::vector<Subscription> eec1_subs = {
+    Subscription{
+        .signal_name = "engine_speed",
+        .subscriber_id = 0x300,
+        .length = 16,
+        .value = 0,
+        .pos = 0,
+        .scale = 1,
+        .offset = 0
+    },
+
+};
+
+std::vector<Subscription> eec2_subs = {};
+
+std::vector<Subscription> eec3_subs = {};
+
+std::vector<Subscription> eec5_subs = {
+    Subscription{
+        .signal_name = "actual_vgt_position",
+        .subscriber_id = 0x302,
+        .length = 8,
+        .value = 0,
+        .pos = 6,
+        .scale = 1,
+        .offset = 0
+    },
+
+};
+
+std::vector<Subscription> eec9_subs = {
+    Subscription{
+        .signal_name = "commanded_fuel_rail_pressure",
+        .subscriber_id = 0x303,
+        .length = 16,
+        .value = 0,
+        .pos = 0,
+        .scale = 1e8, // mPa to Bar
+        .offset = 0
+    },
+};
+
+std::vector<Subscription> eec20_subs = {};
+
+std::vector<Subscription> cac1_subs = {};
+
+std::vector<Subscription> easi_subs = {};
+
+std::vector<Subscription> ebcc_subs = {
+    Subscription{
+        .signal_name = "desired_boost_pressure",
+        .subscriber_id = 0x307,
+        .length = 16,
+        .value = 0,
+        .pos = 4,
+        .scale = 0.1, // kPa -> mBar
+        .offset = 0
+    }
+};
+
+std::vector<Subscription> efl_p1_subs = {
+    Subscription{
+        .signal_name = "eng_oil_press",
+        .subscriber_id = 0x30B,
+        .length = 8,
+        .value = 0,
+        .pos = 4,
+        .scale = 0.25,
+        .offset = 0 
+    },
+};
+
+std::vector<Subscription> efl_p2_subs = {};
+
+std::vector<Subscription> et1_subs = {
+    Subscription{
+        .signal_name = "eng_coolant_temp",
+        .subscriber_id = 0x30B,
+        .length = 8,
+        .value = 0,
+        .pos = 0,
+        .scale = 1, // degC,
+        .offset = 0
+    },
+    Subscription{
+        .signal_name = "eng_fuel_temp1",
+        .subscriber_id = 0x30B,
+        .length = 8,
+        .value = 0,
+        .pos = 1,
+        .scale = 1,
+        .offset = 0
+    },
+};
+
+std::vector<Subscription> et3_subs = {};
+
+std::vector<Subscription> ic1_subs = {
+    Subscription{
+        .signal_name = "eng_intake_manifold1_press",
+        .subscriber_id = 0x300,
+        .length = 16,
+        .value = 0,
+        .pos = 4,
+        .scale = 0.1,    // to go from Kpa to mBar
+        .offset = 0
+    },
+
+};
+
+std::vector<Subscription> lfe1_subs = {};
+
+std::vector<Subscription> tci5_subs = {};
+
+std::vector<Subscription> vep1_subs = {};
+
+
+
+
+
+// We might want to have wheel_based_vehicle_speed from ccvs1_cruist_control_veh_spd
 
 
 
@@ -95,7 +213,7 @@ int main(int argc, char* argv[]) {
 
     handler.print_id_to_owner_map();
 
-
+    handler.print_value_map();
 
     if (argc < 3) {
         std::cerr << "Usage: " << argv[0] << " <can0> <can1>\n";
@@ -184,12 +302,12 @@ int main(int argc, char* argv[]) {
                     memcpy(&frame.len, &message.length, sizeof(message.length) );
                     memcpy(&frame.data, &message.data, 8);
 
-                    std::cout << "FINNA SEND\n";
-                    std::cout << "outgoing id: " << frame.can_id << "\n";
-                    std::cout << "outgoing dlc: " << frame.can_dlc << "\n";
-                    for(int i = 0; i < 8; i++){
-                        std::cout << "outgoing data[" << i << "] " << frame.data[i] << "\n";
-                    }
+                    // std::cout << "FINNA SEND\n";
+                    // std::cout << "outgoing id: " << frame.can_id << "\n";
+                    // std::cout << "outgoing dlc: " << frame.can_dlc << "\n";
+                    // for(int i = 0; i < 8; i++){
+                    //     std::cout << "outgoing data[" << i << "] " << frame.data[i] << "\n";
+                    // }
 
                     ssize_t bytesWritten = write(outSock, &frame, sizeof(frame));
 
@@ -199,7 +317,9 @@ int main(int argc, char* argv[]) {
                 }
                 auto end_time = std::chrono::high_resolution_clock::now();
                 auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time-start_time);
-                std::cout << "TIME TO TRANSLATE: " << duration.count() << "\n";
+                //std::cout << "TIME TO TRANSLATE: " << duration.count() << "\n";
+
+                handler.print_value_map();
             }
         }
     }
@@ -219,7 +339,27 @@ int main(int argc, char* argv[]) {
 
 
 void set_subscriptions(MessageHandler& handler){
+    handler.set_subscriptions(DURA_MAX_AMB_AMBIENT_CONDITIONS_FRAME_ID, amb_subs);
+    handler.set_subscriptions(DURA_MAX_EEC1_ELECTRONIC_ENGINE_CONTROL_1_FRAME_ID, eec1_subs);
+    handler.set_subscriptions(DURA_MAX_EEC2_ELECTRONIC_ENGINE_CONTROL_2_FRAME_ID, eec2_subs);
+    handler.set_subscriptions(DURA_MAX_EEC3_ELECTRONIC_ENGINE_CONTROL_3_FRAME_ID, eec3_subs);
     handler.set_subscriptions(DURA_MAX_EEC5_ELECTRONIC_ENGINE_CONTROL_5_FRAME_ID, eec5_subs);
+
+    handler.set_subscriptions(DURA_MAX_EEC9_ELECTRONIC_ENGINE_CONTROL_9_FRAME_ID, eec9_subs);
+    handler.set_subscriptions(DURA_MAX_EEC20_ELECTRONIC_ENGINE_CONTROL__FRAME_ID, eec20_subs);
+    handler.set_subscriptions(DURA_MAX_CAC1_CHARGE_AIR_COOLER_1_FRAME_ID, cac1_subs);
+    handler.set_subscriptions(DURA_MAX_EASI_ENGINE_AIR_SYSTEM_INFO_FRAME_ID, easi_subs);
+    handler.set_subscriptions(DURA_MAX_EBCC_ENGINE_EXHAUST_BRAKE_CONT_FRAME_ID, ebcc_subs);
+
+    handler.set_subscriptions(DURA_MAX_EFL_P1_ENG_FLUID_LEVEL_PRESS_1_FRAME_ID, efl_p1_subs);
+    handler.set_subscriptions(DURA_MAX_EFL_P2_ENG_FLUID_LEVEL_PRESS_2_FRAME_ID, efl_p2_subs);
+
+    handler.set_subscriptions(DURA_MAX_ET1_ENGINE_TEMPERATURE_1_FRAME_ID, et1_subs);
+    handler.set_subscriptions(DURA_MAX_ET3_ENGINE_TEMPERATURE_3_FRAME_ID, et3_subs);
+    handler.set_subscriptions(DURA_MAX_IC1_INTAKE_EXHAUST_COND_1_FRAME_ID, ic1_subs);
+    handler.set_subscriptions(DURA_MAX_LFE1_FUEL_ECONOMY_LIQUID_1_FRAME_ID, lfe1_subs);
+    handler.set_subscriptions(DURA_MAX_TCI5_TURBOCHARGER_INFORMATION_5_FRAME_ID, tci5_subs);
+    handler.set_subscriptions(DURA_MAX_VEP1_VEHICLE_ELECTRICAL_POWER_1_FRAME_ID, vep1_subs);
 
 }
 

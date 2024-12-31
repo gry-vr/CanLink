@@ -25,7 +25,7 @@ public:
   size_t length;
   uint16_t value;
   uint8_t pos;
-  uint8_t scale;
+  double scale;
   uint8_t offset;
   
     uint16_t return_16(uint16_t val){
