@@ -166,6 +166,81 @@ std::vector<Subscription> vep1_subs = {};
 
 
 
+std::vector<Subscription> throttle_subs = {
+    Subscription{
+        .signal_name = "control_mode",
+        .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
+        .length = 8,
+        .value = 0,
+        .pos = 0,
+        .scale = 1,
+        .offset = 0
+    },
+    Subscription{
+        .signal_name = "speed_low",
+        .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
+        .length = 8,
+        .value = 0,
+        .pos = 1,
+        .scale = 1,
+        .offset = 0
+    },
+    Subscription{
+        .signal_name = "speed_high",
+        .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
+        .length = 8,
+        .value = 0,
+        .pos = 2,
+        .scale = 1,
+        .offset = 0
+    },
+    Subscription{
+        .signal_name = "ff",
+        .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
+        .length = 8,
+        .value = 0,
+        .pos = 3,
+        .scale = 1,
+        .offset = 0
+    },
+    Subscription{
+        .signal_name = "ff",
+        .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
+        .length = 8,
+        .value = 0,
+        .pos = 4,
+        .scale = 1,
+        .offset = 0        
+    },
+    Subscription{
+        .signal_name = "ff",
+        .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
+        .length = 8,
+        .value = 0,
+        .pos = 5,
+        .scale = 1,
+        .offset = 0
+    },
+    Subscription{
+        .signal_name = "ff",
+        .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
+        .length = 8,
+        .value = 0,
+        .pos = 6,
+        .scale = 1,
+        .offset = 0
+    },
+    Subscription{
+        .signal_name = "arc",
+        .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
+        .length = 8,
+        .value = 0,
+        .pos = 7,
+        .scale = 1,
+        .offset = 0
+    },
+
+};
 
 
 // We might want to have wheel_based_vehicle_speed from ccvs1_cruist_control_veh_spd
@@ -208,6 +283,7 @@ int main(int argc, char* argv[]) {
     handler.set_outgoing_message(0x30B,{});
     handler.set_outgoing_message(0x30C,{});
     handler.set_outgoing_message(0x30D,{});
+    handler.set_outgoing_message(DURA_MAX_TSC1_31_FRAME_ID,{});
 
     // 30A is unused so therefore skipped
 
@@ -264,7 +340,6 @@ int main(int argc, char* argv[]) {
             perror("epoll_wait");
             break;
         }
-
         for (int i = 0; i < nfds; i++) {
             int fd = events[i].data.fd;
 
@@ -298,7 +373,13 @@ int main(int argc, char* argv[]) {
                 
                 for(auto& message : outgoing)
                 {   // Forward the frame to the other socket
-                    frame.can_id = message.can_id;
+                    if(message.can_id == DURA_MAX_TSC1_31_FRAME_ID){
+                        frame.can_id = 0xC000031 | CAN_EFF_FLAG;  // Set extended CAN ID
+                    }
+                    else{
+                        frame.can_id = message.can_id;
+                    }
+                    
                     memcpy(&frame.len, &message.length, sizeof(message.length) );
                     memcpy(&frame.data, &message.data, 8);
 
@@ -360,6 +441,7 @@ void set_subscriptions(MessageHandler& handler){
     handler.set_subscriptions(DURA_MAX_LFE1_FUEL_ECONOMY_LIQUID_1_FRAME_ID, lfe1_subs);
     handler.set_subscriptions(DURA_MAX_TCI5_TURBOCHARGER_INFORMATION_5_FRAME_ID, tci5_subs);
     handler.set_subscriptions(DURA_MAX_VEP1_VEHICLE_ELECTRICAL_POWER_1_FRAME_ID, vep1_subs);
+    handler.set_subscriptions(0x200, throttle_subs);
 
 }
 
@@ -508,6 +590,31 @@ void set_pgn_owners(MessageHandler& handler){
         decode_dura_max_vep1_vehicle_electrical_power_1
     );
     counter++;
+
+    handler.add_pgn_owner<canopen_throttle>(
+        0x200,
+        // init
+        [](canopen_throttle* strct)->int{ 
+            strct = {0};
+            return 1;
+        },
+        // unpack 
+        [](canopen_throttle* strct, const uint8_t *data, size_t size){ 
+            strct->control_mode = data[4];
+            strct->speed_high = data[5];
+            strct->speed_low = data[6];
+            strct->arc = data[7]; // arc and checksum
+        },
+        // decode
+        [](std::unordered_map<std::string, double>& value_map, canopen_throttle* strct){
+            value_map["control_mode"] = strct->control_mode;
+            value_map["speed_high"] = strct->speed_high;
+            value_map["speed_low"] = strct->speed_low;
+            value_map["arc"] = strct -> arc;
+        }
+
+    );
+    
 
     std::cout << "\n" << "amount counter: " << counter << "\n";
 }

@@ -5,6 +5,7 @@
 #include <linux/can.h>
 
 
+
 class MessageHandler {
 private:
   std::unordered_map<std::string, double> value_map;
@@ -33,6 +34,12 @@ private:
   }
 
     void pack_outgoing(Subscription& sub, CANOpenMessage& msg) {  // Removed const from Subscription
+        // handling special case of subscribing to constant value
+        if(sub.signal_name=="ff"){
+            std::cout << "HELLO ? \n"; 
+            msg.data[sub.pos] = 0xff;
+            return;
+        }
         auto it = value_map.find(sub.signal_name);
         if (it == value_map.end()) {
             std::cerr << "Signal " << sub.signal_name << " not found in value_map." << std::endl;
@@ -42,6 +49,8 @@ private:
             std::cerr << "There was an issue with the " << sub.signal_name << " subscription position or length \n";
             return;
         }
+
+
 
         msg.can_id = sub.subscriber_id;
         double value = (it->second - sub.offset) / sub.scale;
@@ -150,4 +159,6 @@ public:
         }
         std::cout << id_to_owner.size() << "\n";
     }
+
+
 };
