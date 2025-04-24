@@ -177,20 +177,20 @@ std::vector<Subscription> throttle_subs = {
         .offset = 0
     },
     Subscription{
-        .signal_name = "speed_low",
-        .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
-        .length = 8,
-        .value = 0,
-        .pos = 1,
-        .scale = 1,
-        .offset = 0
-    },
-    Subscription{
         .signal_name = "speed_high",
         .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
         .length = 8,
         .value = 0,
         .pos = 2,
+        .scale = 1,
+        .offset = 0
+    },
+    Subscription{
+        .signal_name = "speed_low",
+        .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
+        .length = 8,
+        .value = 0,
+        .pos = 1, // changed to .pos = 1 ( was .pos = 2)
         .scale = 1,
         .offset = 0
     },
@@ -231,7 +231,7 @@ std::vector<Subscription> throttle_subs = {
         .offset = 0
     },
     Subscription{
-        .signal_name = "arc",
+        .signal_name = "arc", // this is also the checksum here
         .subscriber_id = DURA_MAX_TSC1_31_FRAME_ID,
         .length = 8,
         .value = 0,
@@ -601,16 +601,93 @@ void set_pgn_owners(MessageHandler& handler){
         // unpack 
         [](canopen_throttle* strct, const uint8_t *data, size_t size){ 
             strct->control_mode = data[4];
-            strct->speed_high = data[5];
-            strct->speed_low = data[6];
+            strct->speed_low = data[5];
+            strct->speed_high = data[6];
             strct->arc = data[7]; // arc and checksum
         },
         // decode
         [](std::unordered_map<std::string, double>& value_map, canopen_throttle* strct){
-            value_map["control_mode"] = strct->control_mode;
+          static uint8_t alive_rolling_counter = 0;
+
+	// so until we reach 5 %  send the control mode as 00
+	    uint16_t speed_value = (strct->speed_high << 8 ) | strct->speed_low;
+	    speed_value = (speed_value > 9600) ? speed_value : 9600;
+	    strct->speed_high = (speed_value >> 8) & 0xff;
+        strct->speed_low = speed_value & 0xff; 
+	    double rpm_ = speed_value * 0.125;
+            
+            value_map["control_mode"] = (strct->speed_high < 0x21)? 0x00 : 0xF1;
+            
+          
             value_map["speed_high"] = strct->speed_high;
             value_map["speed_low"] = strct->speed_low;
-            value_map["arc"] = strct -> arc;
+            
+
+            // THE GOAL!
+            //value_map["arc"] = ;
+            
+            
+            uint8_t fake_data[8] = {
+                value_map["control_mode"], // control mode
+                strct->speed_low & 0xff, // low_bytes of throttle
+                strct->speed_high & 0xff, // high_bytes of throttle
+                0xff,
+                0xff,
+                0xff,
+                0xff,
+                0xff  // checksum (higher nibble) | arc (lower nibble)
+            };
+            
+            
+            
+          
+            auto calc_checksum = [](uint32_t id, const uint8_t* data, uint8_t arc){                        
+              uint32_t VeGMDR_y_Sum = 0x00;
+              uint8_t VeGMDR_y_ChkSm = 0x00;
+              
+              // Sum up the first 7 bytes of the message
+              for (int i = 0; i < 7; i++) {
+                  VeGMDR_y_Sum += data[i];
+              }
+
+              // Add ARC (lower 4 bits), and each byte of the ID
+              VeGMDR_y_Sum += (arc & 0x0F);
+              VeGMDR_y_Sum += (uint8_t)(id);
+              VeGMDR_y_Sum += (uint8_t)(id >> 8);
+              VeGMDR_y_Sum += (uint8_t)(id >> 16);
+              VeGMDR_y_Sum += (uint8_t)(id >> 24);
+
+              // Compute checksum (3 bits)
+              VeGMDR_y_ChkSm = ((((VeGMDR_y_Sum >> 6) & 0x03) + (VeGMDR_y_Sum >> 3) + VeGMDR_y_Sum) & 0x07);
+
+              return VeGMDR_y_ChkSm;
+            };
+            
+            auto combine_arc_checksum = [](uint8_t arc, uint8_t checksum){
+                return ((checksum & 0x0f) << 4) | (arc & 0x0F); // Upper 4 bits: checksum, lower 4 bits: ARC
+            };
+            
+            uint8_t checksum = calc_checksum(0xC000031, fake_data, alive_rolling_counter);
+            value_map["arc"] = combine_arc_checksum(alive_rolling_counter, checksum);
+            alive_rolling_counter = (alive_rolling_counter + 1) % 8;
+            
+            /*
+# === Utility Functions ===
+def calculate_checksum(can_id, data, arc):
+    checksum_sum = sum(data[:7])
+    checksum_sum += arc & 0x0F
+    checksum_sum += (can_id & 0xFF)
+    checksum_sum += ((can_id >> 8) & 0xFF)
+    checksum_sum += ((can_id >> 16) & 0xFF)
+    checksum_sum += ((can_id >> 24) & 0xFF)
+    checksum = (((checksum_sum >> 6) & 0x03) + (checksum_sum >> 3) + checksum_sum) & 0x07
+    return checksum
+
+def pack_checksum_and_arc(arc, checksum):
+    return ((checksum & 0x0F) << 4) | (arc & 0x0F)
+*/
+
+
         }
 
     );
