@@ -609,12 +609,12 @@ void set_pgn_owners(MessageHandler& handler){
         [](std::unordered_map<std::string, double>& value_map, canopen_throttle* strct){
           static uint8_t alive_rolling_counter = 0;
 
-	// so until we reach 5 %  send the control mode as 00
-	    uint16_t speed_value = (strct->speed_high << 8 ) | strct->speed_low;
-	    speed_value = (speed_value > 9600) ? speed_value : 9600;
-	    strct->speed_high = (speed_value >> 8) & 0xff;
-        strct->speed_low = speed_value & 0xff; 
-	    double rpm_ = speed_value * 0.125;
+            // so until we reach 5 %  send the control mode as 00
+            uint16_t speed_value = (strct->speed_high << 8 ) | strct->speed_low;
+            speed_value = ( (speed_value > 10400) ? (speed_value > 16008) ? speed_value : 16000 : 10000 );
+            strct->speed_high = (speed_value >> 8) & 0xff;
+            strct->speed_low = speed_value & 0xff; 
+            double rpm_ = speed_value * 0.125;
             
             value_map["control_mode"] = (strct->speed_high < 0x21)? 0x00 : 0xF1;
             
