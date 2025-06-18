@@ -143,14 +143,23 @@ std::vector<Subscription> et1_subs = {
         .offset = -10
     },
     Subscription{
-        .signal_name = "eng_fuel_temp1",
+        .signal_name = "eng_oil_temp1", //farenheit
         .subscriber_id = 0x30B,
-        .length = 8,
+        .length = 16,
         .value = 0,
         .pos = 1,
-        .scale = 1,
-        .offset = 0
+        .scale = 1, // put 1.8
+        .offset = 0 // put -32 
     },
+    // Subscription{
+    //     .signal_name = "eng_fuel_temp1",
+    //     .subscriber_id = 0x30B,
+    //     .length = 8,
+    //     .value = 0,
+    //     .pos = 1,
+    //     .scale = 1,
+    //     .offset = 0
+    // },
 };
 
 std::vector<Subscription> et3_subs = {};
@@ -165,6 +174,15 @@ std::vector<Subscription> ic1_subs = {
         .scale = 0.1,    // to go from Kpa to mBar
         .offset = 0
     },
+    Subscription{
+        .signal_name = "eng_exhaust_gas_temp",
+        .subscriber_id = 0x30B,
+        .length = 16,
+        .value = 0,
+        .pos = 6,
+        .scale = 1, // put 1.8
+        .offset = 0, // put -32 before
+    }
 
 };
 
