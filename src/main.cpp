@@ -59,6 +59,16 @@ std::vector<Subscription> eec1_subs = {
         .offset = 0
     },
 
+    {
+        .signal_name = "remote_accel_pedal_pos",
+        .subscriber_id = 0x300,
+        .length = 8,
+        .value = 0,
+        .pos = 2,
+        .scale = 0.00392156862745, 
+        .offset = 0
+    },
+
 };
 
 std::vector<Subscription> eec2_subs = {};
@@ -84,8 +94,8 @@ std::vector<Subscription> eec9_subs = {
         .subscriber_id = 0x303,
         .length = 16,
         .value = 0,
-        .pos = 0,
-        .scale = 1e8, // mPa to Bar
+        .pos = 6,
+        .scale = 0.1, // mPa to Bar
         .offset = 0
     },
 };
@@ -115,7 +125,7 @@ std::vector<Subscription> efl_p1_subs = {
         .length = 8,
         .value = 0,
         .pos = 4,
-        .scale = 0.25,
+        .scale = 4.00001,
         .offset = 0 
     },
 };
@@ -129,8 +139,8 @@ std::vector<Subscription> et1_subs = {
         .length = 8,
         .value = 0,
         .pos = 0,
-        .scale = 1, // degC,
-        .offset = 0
+        .scale = 0.62745098039, // degC, so (degC -> degF -> raw) -> raw = (degC +10) / 0.62712
+        .offset = -10
     },
     Subscription{
         .signal_name = "eng_fuel_temp1",
@@ -162,7 +172,16 @@ std::vector<Subscription> lfe1_subs = {};
 
 std::vector<Subscription> tci5_subs = {};
 
-std::vector<Subscription> vep1_subs = {};
+std::vector<Subscription> vep1_subs = {
+    {
+        .signal_name  = "keyswitch_battery_potential_158", // value in V
+        .subscriber_id = 0x308,
+        .length       = 16,
+        .pos          = 0,               // Bytes 0-1
+        .scale        = 0.017595307918,  // V/bit  (DBC factor)
+        .offset       = 0
+    },
+};
 
 
 

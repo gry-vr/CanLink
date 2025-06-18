@@ -26,7 +26,7 @@ public:
   uint16_t value;
   uint8_t pos;
   double scale;
-  uint8_t offset;
+  int8_t offset;
   
   uint16_t return_16(uint16_t val){
     return val & 0xffff;
