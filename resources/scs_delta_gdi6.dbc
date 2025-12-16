@@ -1,0 +1,49 @@
+VERSION ""
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+BO_ 768 EXPORT_0: 8 Vector__XXX
+ SG_ eng_speed : 7|16@0+ (1,0) [0|0] "rpm" Vector__XXX
+ SG_ manifold_press : 39|16@0+ (1,0) [0|0] "mBar" Vector__XXX
+ SG_ actual_throttle : 23|8@0+ (0.00392156862745,0) [0|0] "n%" Vector__XXX
+BO_ 779 EXPORT_B: 8 Vector__XXX
+ SG_ coolant_temp : 7|8@0+ (1.12941176471,14) [0|0] "F" Vector__XXX
+ SG_ oil_pressure : 39|8@0+ (0.580152,0) [0|0] "PSI" Vector__XXX
+BO_ 771 EXPORT_3: 8 Vector__XXX
+ SG_ fuel_rail_pressure : 55|16@0- (1,0) [0|0] "Bar" Vector__XXX
+BO_ 776 EXPORT_8: 8 Vector__XXX
+ SG_ battery_bus_voltage : 7|16@0+ (0.0175953079179,0) [0|0] "0 = 0V, 1023 = 18V" Vector__XXX
+
+VAL_ 0 CS 1 "Start" 2 "Stop" 128 "EnterPreOperational" 129 "ResetNode" 130 "ResetCommunication" ;
