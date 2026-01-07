@@ -41,6 +41,8 @@ BO_ 768 EXPORT_0: 8 Vector__XXX
 BO_ 779 EXPORT_B: 8 Vector__XXX
  SG_ coolant_temp : 7|8@0+ (1.12941176471,14) [0|0] "F" Vector__XXX
  SG_ oil_pressure : 39|8@0+ (0.580152,0) [0|0] "PSI" Vector__XXX
+ SG_ oil_temp : 15|16@0+ (1.8,32) [0|0] "F" Vector__XXX
+ SG_ exhaust_gas_temp : 55|16@0+ (1.8,32) [0|0] "F" Vector__XXX
 BO_ 771 EXPORT_3: 8 Vector__XXX
  SG_ fuel_rail_pressure : 55|16@0- (1,0) [0|0] "Bar" Vector__XXX
 BO_ 776 EXPORT_8: 8 Vector__XXX

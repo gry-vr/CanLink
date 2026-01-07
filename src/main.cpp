@@ -174,8 +174,15 @@ std::vector<Subscription> ic1_subs = {
         .scale = 0.1,    // to go from Kpa to mBar
         .offset = 0
     },
-    Subscription{
-        .signal_name = "eng_exhaust_gas_temp",
+
+
+};
+
+std::vector<Subscription> lfe1_subs = {};
+
+std::vector<Subscription> tci5_subs = {
+        Subscription{
+        .signal_name = "engine_turbocharger_1_turbine_ou",
         .subscriber_id = 0x30B,
         .length = 16,
         .value = 0,
@@ -183,12 +190,7 @@ std::vector<Subscription> ic1_subs = {
         .scale = 1, // put 1.8
         .offset = 0, // put -32 before
     }
-
 };
-
-std::vector<Subscription> lfe1_subs = {};
-
-std::vector<Subscription> tci5_subs = {};
 
 std::vector<Subscription> vep1_subs = {
     {
@@ -317,7 +319,7 @@ int main(int argc, char* argv[]) {
     handler.set_outgoing_message(0x307,{});
     handler.set_outgoing_message(0x308,{});
     handler.set_outgoing_message(0x309,{});
-    handler.set_outgoing_message(0x30B,{});
+    handler.set_outgoing_message(0x30B,{}); // this is the trouble one
     handler.set_outgoing_message(0x30C,{});
     handler.set_outgoing_message(0x30D,{});
     handler.set_outgoing_message(DURA_MAX_TSC1_31_FRAME_ID,{});

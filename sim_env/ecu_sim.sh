@@ -30,6 +30,11 @@ echo "sent efl_p1"
 cansend vcan1 98fef700#DEADBEEFDEADF000
 echo "sent vep1"
 
+# TCI5_Turbocharger_Information_5
+# ID: 0x98FD5500 (2566821632)
+# Data: T1=150C, T2=200C, T3=250C, T4=300C
+cansend vcan1 98fe9700#E034203B6041A047
+echo "sent tci5"
 
 #EEC1
 #cansend vcan1 0CF00400#DEADBEEF

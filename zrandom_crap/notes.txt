@@ -1,0 +1,24 @@
+so here are all of the outgoing messages that we've set up:
+
+
+
+    handler.set_outgoing_message(0x300,{});
+    handler.set_outgoing_message(0x400,{}); // delete this one
+    handler.set_outgoing_message(0x301,{});
+    handler.set_outgoing_message(0x302,{});
+    handler.set_outgoing_message(0x303,{});
+    handler.set_outgoing_message(0x304,{});
+    handler.set_outgoing_message(0x305,{});
+    handler.set_outgoing_message(0x306,{});
+    handler.set_outgoing_message(0x307,{});
+    handler.set_outgoing_message(0x308,{});
+    handler.set_outgoing_message(0x309,{});
+    handler.set_outgoing_message(0x30B,{});
+    handler.set_outgoing_message(0x30C,{});
+    handler.set_outgoing_message(0x30D,{});
+    handler.set_outgoing_message(DURA_MAX_TSC1_31_FRAME_ID,{});
+
+
+everything but TSC1_31 is for the PIGS...
+
+

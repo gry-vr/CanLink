@@ -1,0 +1,2019 @@
+
+amount counter: 18
+ids 201326641
+ids 781
+ids 768
+ids 1024
+ids 777
+ids 769
+ids 770
+ids 771
+ids 772
+ids 773
+ids 774
+ids 775
+ids 776
+ids 779
+ids 780
+19
+Forwarding messages between vcan0 and vcan1.
+ID incoming 419362048
+incoming ID 18fef500
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 2
+WTF 307
+WTF 30b
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 1
+Signal 308 value 0
+Signal 30b value 1
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 1
+WHYY ID 307
+ID 308
+true? 0
+ID 30b
+true? 1
+WHYY ID 30b
+ID 30c
+true? 0
+SIZE: 2
+Signal engine_air_intake_temperature value 133
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal cab_interior_temp value 1252.41
+Signal barometric_pressure_barometric_pr value 111
+ID incoming cf00400
+incoming ID cf00400
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 2
+WTF 300
+WTF 300
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 1
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 1
+WHYY ID 300
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal engine_speed value 7133.88
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal eng_starter_mode value 14
+Signal actual_engine_percent_torque value 65
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal engine_air_intake_temperature value 133
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal cab_interior_temp value 1252.41
+Signal engine_torque_mode value 14
+Signal barometric_pressure_barometric_pr value 111
+ID incoming 10fcfd00
+incoming ID 10fcfd00
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 303
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 1
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 1
+WHYY ID 303
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal commanded_fuel_rail_pressure value 173.867
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal engine_torque_mode value 14
+Signal cab_interior_temp value 1252.41
+Signal road_surface_temp value 1644.94
+Signal barometric_pressure_barometric_pr value 111
+Signal ambient_air_temperature value 1510.47
+Signal engine_air_intake_temperature value 133
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal actual_engine_percent_torque value 65
+Signal eng_starter_mode value 14
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal engine_speed value 7133.88
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal engine_demand_percent_torque value 114
+ID incoming 18feee00
+incoming ID 18feee00
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 2
+WTF 30b
+WTF 30b
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 1
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 1
+WHYY ID 30b
+ID 30c
+true? 0
+SIZE: 1
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intercooler_temp value 150
+Signal eng_coolant_temp value 43
+Signal commanded_fuel_rail_pressure value 173.867
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal engine_torque_mode value 14
+Signal cab_interior_temp value 1252.41
+Signal road_surface_temp value 1644.94
+Signal barometric_pressure_barometric_pr value 111
+Signal ambient_air_temperature value 1510.47
+Signal eng_oil_temp1 value 1644.94
+Signal engine_air_intake_temperature value 133
+Signal eng_turbo_oil_temp value 1117.94
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal actual_engine_percent_torque value 65
+Signal eng_starter_mode value 14
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal engine_speed value 7133.88
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_fuel_temp1 value 133
+Signal engine_demand_percent_torque value 114
+ID incoming 18fef600
+incoming ID 18fef600
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 300
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 1
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 1
+WHYY ID 300
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal eng_coolant_filter_diff_press value 119.5
+Signal eng_air_intake_press value 478
+Signal eng_intake_manifold1_temp value 150
+Signal eng_intake_manifold1_press value 346
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intercooler_temp value 150
+Signal eng_coolant_temp value 43
+Signal aft1_dpf_in_press value 111
+Signal commanded_fuel_rail_pressure value 173.867
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_exhaust_gas_temp value 1252.41
+Signal engine_torque_mode value 14
+Signal cab_interior_temp value 1252.41
+Signal road_surface_temp value 1644.94
+Signal barometric_pressure_barometric_pr value 111
+Signal ambient_air_temperature value 1510.47
+Signal eng_air_filter1_diff_press value 11.1
+Signal eng_oil_temp1 value 1644.94
+Signal engine_air_intake_temperature value 133
+Signal eng_turbo_oil_temp value 1117.94
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal actual_engine_percent_torque value 65
+Signal eng_starter_mode value 14
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal engine_speed value 7133.88
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_fuel_temp1 value 133
+Signal engine_demand_percent_torque value 114
+ID incoming 18feef00
+incoming ID 18feef00
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 30b
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 1
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 1
+WHYY ID 30b
+ID 30c
+true? 0
+SIZE: 1
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 18fef700
+incoming ID 18fef700
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 308
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 1
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 1
+WHYY ID 308
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 18fd5500
+incoming ID 18fd5500
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 0
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 
+amount counter: 18
+ids 201326641
+ids 781
+ids 768
+ids 1024
+ids 777
+ids 769
+ids 770
+ids 771
+ids 772
+ids 773
+ids 774
+ids 775
+ids 776
+ids 779
+ids 780
+19
+Forwarding messages between vcan0 and vcan1.
+ID incoming 419362048
+incoming ID 18fef500
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 2
+WTF 307
+WTF 30b
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 1
+Signal 308 value 0
+Signal 30b value 1
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 1
+WHYY ID 307
+ID 308
+true? 0
+ID 30b
+true? 1
+WHYY ID 30b
+ID 30c
+true? 0
+SIZE: 2
+Signal engine_air_intake_temperature value 133
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal cab_interior_temp value 1252.41
+Signal barometric_pressure_barometric_pr value 111
+ID incoming cf00400
+incoming ID cf00400
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 2
+WTF 300
+WTF 300
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 1
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 1
+WHYY ID 300
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal engine_speed value 7133.88
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal eng_starter_mode value 14
+Signal actual_engine_percent_torque value 65
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal engine_air_intake_temperature value 133
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal cab_interior_temp value 1252.41
+Signal engine_torque_mode value 14
+Signal barometric_pressure_barometric_pr value 111
+ID incoming 10fcfd00
+incoming ID 10fcfd00
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 303
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 1
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 1
+WHYY ID 303
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal commanded_fuel_rail_pressure value 173.867
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal engine_torque_mode value 14
+Signal cab_interior_temp value 1252.41
+Signal road_surface_temp value 1644.94
+Signal barometric_pressure_barometric_pr value 111
+Signal ambient_air_temperature value 1510.47
+Signal engine_air_intake_temperature value 133
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal actual_engine_percent_torque value 65
+Signal eng_starter_mode value 14
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal engine_speed value 7133.88
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal engine_demand_percent_torque value 114
+ID incoming 18feee00
+incoming ID 18feee00
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 2
+WTF 30b
+WTF 30b
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 1
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 1
+WHYY ID 30b
+ID 30c
+true? 0
+SIZE: 1
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intercooler_temp value 150
+Signal eng_coolant_temp value 43
+Signal commanded_fuel_rail_pressure value 173.867
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal engine_torque_mode value 14
+Signal cab_interior_temp value 1252.41
+Signal road_surface_temp value 1644.94
+Signal barometric_pressure_barometric_pr value 111
+Signal ambient_air_temperature value 1510.47
+Signal eng_oil_temp1 value 1644.94
+Signal engine_air_intake_temperature value 133
+Signal eng_turbo_oil_temp value 1117.94
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal actual_engine_percent_torque value 65
+Signal eng_starter_mode value 14
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal engine_speed value 7133.88
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_fuel_temp1 value 133
+Signal engine_demand_percent_torque value 114
+ID incoming 18fef600
+incoming ID 18fef600
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 300
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 1
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 1
+WHYY ID 300
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal eng_coolant_filter_diff_press value 119.5
+Signal eng_air_intake_press value 478
+Signal eng_intake_manifold1_temp value 150
+Signal eng_intake_manifold1_press value 346
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intercooler_temp value 150
+Signal eng_coolant_temp value 43
+Signal aft1_dpf_in_press value 111
+Signal commanded_fuel_rail_pressure value 173.867
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_exhaust_gas_temp value 1252.41
+Signal engine_torque_mode value 14
+Signal cab_interior_temp value 1252.41
+Signal road_surface_temp value 1644.94
+Signal barometric_pressure_barometric_pr value 111
+Signal ambient_air_temperature value 1510.47
+Signal eng_air_filter1_diff_press value 11.1
+Signal eng_oil_temp1 value 1644.94
+Signal engine_air_intake_temperature value 133
+Signal eng_turbo_oil_temp value 1117.94
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal actual_engine_percent_torque value 65
+Signal eng_starter_mode value 14
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal engine_speed value 7133.88
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_fuel_temp1 value 133
+Signal engine_demand_percent_torque value 114
+ID incoming 18feef00
+incoming ID 18feef00
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 30b
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 1
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 1
+WHYY ID 30b
+ID 30c
+true? 0
+SIZE: 1
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 18fef700
+incoming ID 18fef700
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 308
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 1
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 1
+WHYY ID 308
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 18fd5500
+incoming ID 18fd5500
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 0
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 18fef500
+incoming ID 18fef500
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 2
+WTF 307
+WTF 30b
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 1
+Signal 308 value 0
+Signal 30b value 1
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 1
+WHYY ID 307
+ID 308
+true? 0
+ID 30b
+true? 1
+WHYY ID 30b
+ID 30c
+true? 0
+SIZE: 2
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming cf00400
+incoming ID cf00400
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 2
+WTF 300
+WTF 300
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 1
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 1
+WHYY ID 300
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 10fcfd00
+incoming ID 10fcfd00
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 303
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 1
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 1
+WHYY ID 303
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 18feee00
+incoming ID 18feee00
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 2
+WTF 30b
+WTF 30b
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 1
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 1
+WHYY ID 30b
+ID 30c
+true? 0
+SIZE: 1
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 18fef600
+incoming ID 18fef600
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 300
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 1
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 1
+WHYY ID 300
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 18feef00
+incoming ID 18feef00
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 30b
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 1
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 1
+WHYY ID 30b
+ID 30c
+true? 0
+SIZE: 1
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 18fef700
+incoming ID 18fef700
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 308
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 1
+Signal 30b value 0
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 1
+WHYY ID 308
+ID 30b
+true? 0
+ID 30c
+true? 0
+SIZE: 1
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_rail_pressure value 173.867
+Signal aft1_dpf_in_press value 111
+Signal keyswitch_battery_potential_158 value 12
+Signal eng_coolant_temp value 43
+Signal barometric_pressure_barometric_pr value 111
+Signal eng_exhaust_gas_temp value 1252.41
+Signal eng_intercooler_temp value 150
+Signal eng_intercooler_thermostat_opening value 95.6
+Signal eng_intake_manifold1_press value 346
+Signal actl_eng_prcnt_torque_high_resolution value 1.625
+Signal cab_interior_temp value 1252.41
+Signal eng_air_intake_press value 478
+Signal drivers_demand_engine_prcnt_torq value 48
+Signal eng_intake_manifold1_temp value 150
+Signal eng_coolant_filter_diff_press value 119.5
+ID incoming 18fe9700
+incoming ID 18fe9700
+MADE IT PAST 
+PACKING OUTGOING 
+size of subs 1
+WTF 30b
+Signal c000031 value 0
+Signal 30d value 0
+Signal 300 value 0
+Signal 400 value 0
+Signal 309 value 0
+Signal 301 value 0
+Signal 302 value 0
+Signal 303 value 0
+Signal 304 value 0
+Signal 305 value 0
+Signal 306 value 0
+Signal 307 value 0
+Signal 308 value 0
+Signal 30b value 1
+Signal 30c value 0
+Getting outgoing msgs
+ID c000031
+true? 0
+ID 30d
+true? 0
+ID 300
+true? 0
+ID 400
+true? 0
+ID 309
+true? 0
+ID 301
+true? 0
+ID 302
+true? 0
+ID 303
+true? 0
+ID 304
+true? 0
+ID 305
+true? 0
+ID 306
+true? 0
+ID 307
+true? 0
+ID 308
+true? 0
+ID 30b
+true? 1
+WHYY ID 30b
+ID 30c
+true? 0
+SIZE: 1
+Signal engine_turbocharger_3_turbine_ou value 250
+Signal engine_turbocharger_2_turbine_ou value 200
+Signal battery_potential_power_input_1_ value 2225.5
+Signal charging_system_potential_volta value 3068.7
+Signal alternator_current_115_ value 173
+Signal net_battery_current_114_ value 97
+Signal eng_coolant_press value 380
+Signal eng_crankcase_press value 97.7344
+Signal eng_oil_level value 76
+Signal eng_ex_crankcase_blowby_press value 8.65
+Signal eng_fuel_delivery_press value 888
+Signal engine_demand_percent_torque value 114
+Signal src_addrss_of_cntrllng_dvc_for_eng_ctrl value 173
+Signal engine_turbocharger_1_turbine_ou value 150
+Signal eng_starter_mode value 14
+Signal eng_fuel_temp1 value 133
+Signal engine_speed value 7133.88
+Signal actual_engine_percent_torque value 65
+Signal eng_turbo_oil_temp value 1117.94
+Signal engine_air_intake_temperature value 133
+Signal engine_turbocharger_4_turbine_ou value 300
+Signal eng_oil_press value 956
+Signal eng_oil_temp1 value 1644.94
+Signal eng_air_filter1_diff_press value 11.1
+Signal commanded_engine_fuel_injection_ value 239.742
+Signal ambient_air_temperature value 1510.47
+Signal road_surface_temp value 1644.94
+Signal engine_torque_mode value 14
+Signal engine_exhaust_gas_recirculation value 111.275
+Signal eng_coolant_level value 95.6
+Signal commanded_fuel_
