@@ -1,0 +1,38 @@
+[Unit]
+Description=CanLink Gateway Service
+# Wait specifically for the physical CAN hardware to exist in the kernel
+BindsTo=sys-subsystem-net-devices-can0.device sys-subsystem-net-devices-can1.device
+After=sys-subsystem-net-devices-can0.device sys-subsystem-net-devices-can1.device
+
+[Service]
+Type=simple
+User=root
+ 
+# Restart logic: Wait 5 seconds between crash and restart to prevent a tight crash loop
+Restart=always
+RestartSec=2
+
+# --- Interface Setup ---
+# The '-' prefix tells systemd to continue even if the command "fails" (e.g. if the interface is already down)
+ExecStartPre=-/sbin/ip link set dev can0 down
+ExecStartPre=-/sbin/ip link set dev can1 down
+
+# Configure the CAN interfaces
+ExecStartPre=/sbin/ip link set dev can0 type can bitrate 500000 fd off restart-ms 100
+ExecStartPre=/sbin/ip link set dev can1 type can bitrate 500000 fd off restart-ms 100
+
+# Bring the interfaces up
+ExecStartPre=/sbin/ip link set dev can0 up
+ExecStartPre=/sbin/ip link set dev can1 up
+
+# --- Main Application ---
+# Run the actual gateway binary
+ExecStart=/usr/local/bin/canlink can0 can1
+
+# Let systemd handle the logging natively
+StandardOutput=null
+StandardError=null
+
+[Install]
+WantedBy=multi-user.target
+
